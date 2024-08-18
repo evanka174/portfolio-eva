@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evanka-Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+   
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+<body>
+    <div class="hero-header">
+        <div class="wrapper">
+            <header>
+                <div class="logo">
+                    <i class="fa-solid fa-e"></i>
+                    <div class="logo-text">Evanka Vinoliya</div>
+                </div>
+                <nav>
+                    <div class="togglebtn">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div> 
+                    <ul class="navlinks">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="education.html">Education</a></li>
+                        <li><a href="https://drive.google.com/drive/folders/1XbbpeAZcGv01ezDdQcWI18FMJTr53GQZ?usp=drive_link">Certifications</a></li>
+                        <li><a href="mailto:evankavinoliya@gmail.com">Contact</a></li>
+
+                    </ul>   
+                </nav>
+            </header>
+            <div class="container">
+                <div class="hero-pic">
+                    <img src="assets/images/image.jpg "alt="Profile Pic">
+                </div>
+                <div class="hero-text">
+                    <h5>Hi I'm <span class="input"></span></h5>
+                    <h1>Evanka Vinoliya E</h1>
+                    <p>
+                        I'm a passionate student with a wide range of interests and a deep love for front-end development, web development, and UI/UX design.Whether it’s designing stunning interfaces or coding seamless interactions, I’m eager to contribute and grow in this dynamic field.
+                    </p>
+
+
+                    <div class="btn-group">
+                        <a href="https://drive.google.com/file/d/1XQCCKBb0G1Z49gyjfvK2RCCj3UjY6Tj3/view?usp=drive_link" class="btn active">Download Resume</a>
+
+                    </div>
+
+                    <div class="socials">
+                        <a href="https://www.linkedin.com/in/evanka-vinoliya-a3135125b/"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://www.instagram.com/evanka.vinoliya/?next=%2F&hl=en"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://discord.com/channels/@evanksss1704"><i class="fa-brands fa-discord"></i></a>
+                        <a href="https://github.com/evanka174"><i class="fa-brands fa-github"></i></a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.0/typed.min.js.map"></script>
+    <script>
+        var togglebtn=document.querySelector(".togglebtn");
+        var nav=document.querySelector(".navlinks");
+        var links=document.querySelector(".navlinks li");
+
+        togglebtn.addEventListener("click", function(){
+            this.classList.toggle("click");
+            nav.classList.toggle("open");
+        })
+
+
+        var typed=new typed(".input",{
+            strings:["Web Developer","Frontend Developer","ui/ux Designer"],
+            typedspeed:70,
+            backspeed:55,
+            loop:true
+
+        })
+    </script>
+    
+</body>
+</html>

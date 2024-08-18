@@ -1,0 +1,246 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: poppins, sans-serif;
+    text-decoration: none;
+}
+body{
+    overflow-x: hidden;
+}
+.hero-header{
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+    background: #1B2430;
+}
+.wrapper{
+    width: 1280px;
+    max-width: 95%;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+header{
+    padding: 40px 0 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.logo{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+.logo i{
+    height: 45px;
+    width: 45px;
+    background-color: #395B64;
+    border-radius: 50%;
+    color: #A5C9CA;
+    font-weight: 700;
+    font-size: 1.5rem;
+    padding: 10px;
+    margin-right: 5px;
+    cursor: pointer;
+    text-align: center;
+
+}
+.logo .logo-text{
+    font-size: 24px;
+    font-weight: 500;
+    color:#A5C9CA;
+}
+nav .togglebtn{
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    top: 45px;
+    right: 3%;
+    z-index: 5;
+    cursor: pointer;
+    
+}
+nav .togglebtn span{
+    display: block;
+    background-color: #A5C9CA;
+    margin: 5px 0px;
+    width: 100%;
+    height: 3px;
+    transition: 0.3s;
+    transition-property: transform, opacity;
+
+}
+nav .navlinks{
+    list-style-type: none;
+}
+nav .navlinks li{
+    display: inline-block;
+}
+nav .navlinks li a{
+    color: #CBE4DE ;
+    margin-right: 2.5rem;
+}
+.container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 4%;
+}
+.container .hero-pic{
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 15px solid #444;
+    box-shadow: 5px 7px 25px rgba(0, 0, 0, 0.5);
+}
+.hero-pic img{
+    height: 100%;
+    width: 100%;
+    transition: 0.5s;
+}
+
+.hero-text{
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+}
+.hero-text h5{
+    color: #CBE4DE;
+    font-size: 14px;
+}
+.hero-text h5 span{
+    color: #395B64;
+    font-size: 16px;
+    
+}
+
+.hero-text h5 span::before{
+    content:"FRONTEND DEVELOPER";
+    color: #395B64;
+    font-size: 16px;
+    animation: hero 50s infinite;
+}
+.hero-text h5 span::after{
+    content: "";
+    color: #395B64;
+    font-size: 16px;
+    animation:cursor 0.6s infinite ;
+    
+    
+}
+
+.hero-text h1{
+    color: #395B64;
+    font-size: 3rem;
+}
+.hero-text p{
+    color: #CBE4DE;
+
+}
+.btn-group{
+    margin: 45px;
+}
+.btn-group .btn{
+    border-color: #CBE4DE;
+    color: #CBE4DE;
+    background-color: #333;
+    padding: 12px 25px;
+    margin: 5px 0;
+    margin-right: 7px;
+    border-radius: 30px;
+    border: 2px solid #CBE4DE;
+    box-shadow: 0 10px 10px -8px rgb(0 0 0 / 78%);
+}
+.btn.active{
+    border-color: #395B64;
+}
+
+.hero-text .socials i{
+    color: #e5e5e5;
+    font-size: 30px;
+    margin-right: 10px;
+    transition: 20s;
+}
+.hero-text .socials i:hover{
+    columns: #007ced;
+    transition: rotate(180deg);
+}
+
+@media(max-width:930px)
+{
+    nav.togglebtn{
+        display: initial;
+    }
+
+    .click{
+        top: 45px;
+    }
+    .click span{
+        position: absolute;
+        margin-top: 12px;
+    }
+    .click span:first-child{
+        transform: rotate(-40deg);
+    }
+    .click span:nth-child(2)
+    {
+        opacity: 0;
+        margin: 0;
+    }
+    .click span:last-child{
+        transform: rotate(45deg);
+        top: 0;
+    }
+    nav .navlinks{
+        position: absolute;
+        top:110px;
+        right:-100%;
+        bottom: 0;
+        width: 60%;
+        height: 100vh;
+        background-color: #2C3333;
+        z-index: 3;
+        box-shadow: 5px 13px 30px rgba(0, 0, 0, 0.1);
+        transition: 0.5s;
+        padding: 25px 0px;
+    }
+    nav .navlinks li{
+        display: block;
+    }
+    nav .navlinks li a{
+        display: block;
+        margin-bottom: 15px;
+        text-align: center;
+    }
+    nav .navlinks.open{
+        right: 0;
+    }
+}
+@media(max-width:768px)
+{
+    .container{
+        flex-direction: column;
+        padding-top: 2rem;
+    }
+    .hero-text{
+        padding: 40px 0px;
+    }
+}
+@keyframes hero{
+    0%,50%{
+        content:"FRONTEND DEVELOPER";
+
+
+    }
+    50%,100%{
+        content: "UI/UX DESIGNER";
+    }
+
+}
+@keyframes cursor{
+    to{
+        border-left: 3px solid transparent;
+    }
+}
